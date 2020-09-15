@@ -11,7 +11,7 @@ class TailwindExtractor {
 }
 
 module.exports = {
-  siteName: 'Gridsome',
+  siteName: 'Kyutech Programming Club',
   plugins: [
     {
       use: 'gridsome-plugin-tailwindcss',
