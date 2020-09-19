@@ -48,6 +48,8 @@
 <!--JavaScript-->
 
 <script>
+import Vue2SmoothScrool from '@/plugins/vue2-smooth-scrool'
+
 export default {
     metaInfo: {
         title: 'Hello, world!'
