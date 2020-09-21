@@ -16,6 +16,10 @@
         <a href="https://github.com/kyutech-programming-club" target="_blank" rel="noopener">GitHub</a>
     </p>
 
+    <div>
+      <!-- News component -->
+    </div>
+
 </Layout>
 </template>
 
