@@ -14,6 +14,15 @@ module.exports = {
   siteName: 'Gridsome',
   plugins: [
     {
+      use: '@gridsome/vue-remark',
+      options: {
+        typeName: 'Post', // 必須。GraphQL上で扱う型定義
+        baseDir: './posts', // 記事となるmarkdownファイルを置くディレクトリ
+        pathPrefix: '/posts', // URLになるパス。必須ではない。
+        template: './src/templates/Post.vue' // 記事ページのVueコンポーネントファイルの指定
+      }
+    }     ,
+    {
       use: 'gridsome-plugin-tailwindcss',
       options: {
         config: './src/tailwind.js'
@@ -23,13 +32,13 @@ module.exports = {
       use: 'gridsome-plugin-purgecss',
       options: {
         content: [
-            './src/**/*.vue',
-            './src/**/*.js',
-            './src/**/*.jsx',
-            './src/**/*.md'
-          ],
-          extractor: TailwindExtractor,
-          extensions: ['vue', 'js', 'jsx', 'md']
+          './src/**/*.vue',
+          './src/**/*.js',
+          './src/**/*.jsx',
+          './src/**/*.md'
+        ],
+        extractor: TailwindExtractor,
+        extensions: ['vue', 'js', 'jsx', 'md']
       }
     }
   ]
