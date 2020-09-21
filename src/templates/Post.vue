@@ -1,6 +1,6 @@
 <template>
   <article>
-    <h1>{ $page.post.title }</h1>
+    <h1>{{ $page.post.title }}</h1>
     <VueRemarkContent/>
   </article>
 </template>

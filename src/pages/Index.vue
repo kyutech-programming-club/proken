@@ -16,12 +16,28 @@
         <a href="https://github.com/kyutech-programming-club" target="_blank" rel="noopener">GitHub</a>
     </p>
 
-    <div>
-      <!-- News component -->
+    <div class="index">
+      <g-link v-for="post in $page.posts.edges" :key="post.node.id" :to="post.node.path">
+          <h2>{{ post.node.title }}</h2>
+      </g-link>
     </div>
 
 </Layout>
 </template>
+
+<page-query>
+    query{
+        posts: allPost{
+            edges{
+                node{
+                    id
+                    title
+                    path
+                }
+            }
+        }
+    }
+</page-query>
 
 <!--JavaScript-->
 
