@@ -16,7 +16,7 @@
         <a href="https://github.com/kyutech-programming-club" target="_blank" rel="noopener">GitHub</a>
     </p>
 
-    <div class="index">
+    <div>
       <g-link v-for="post in $page.posts.edges" :key="post.node.id" :to="post.node.path">
           <h2>{{ post.node.title }}</h2>
       </g-link>
