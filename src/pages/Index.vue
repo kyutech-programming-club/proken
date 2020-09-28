@@ -17,8 +17,16 @@
     </p>
 
     <div>
-      <g-link v-for="post in $page.posts.edges" :key="post.node.id" :to="post.node.path">
-          <h2>{{ post.node.title }}</h2>
+      <h1>News</h1>
+      <g-link v-for="news in $page.allNewsPost.edges" :key="news.node.id" :to="news.node.path">
+          <h2>{{ news.node.title }}</h2>
+      </g-link>
+    </div>
+
+    <div>
+      <h1>Products</h1>
+      <g-link v-for="product in $page.allProductPost.edges" :key="product.node.id" :to="product.node.path">
+          <h2>{{ product.node.title }}</h2>
       </g-link>
     </div>
 
@@ -27,7 +35,16 @@
 
 <page-query>
     query{
-        posts: allPost{
+        allNewsPost{
+            edges{
+                node{
+                    id
+                    title
+                    path
+                }
+            }
+        },
+        allProductPost{
             edges{
                 node{
                     id

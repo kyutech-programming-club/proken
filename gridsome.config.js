@@ -13,22 +13,31 @@ class TailwindExtractor {
 module.exports = {
   siteName: 'Gridsome',
   plugins: [
+    // {
+    //   use: '@gridsome/source-filesystem',
+    //   options: {
+    //     typeName: 'BlogPost',
+    //     path: './posts',
+    //   }
+    // },
     {
-      use: '@gridsome/source-filesystem',
+      use: '@gridsome/vue-remark',
       options: {
-        typeName: 'BlogPost',
-        path: './posts',
+        typeName: 'NewsPost', // 必須。GraphQL上で扱う型定義
+        baseDir: './posts/news', // 記事となるmarkdownファイルを置くディレクトリ
+        pathPrefix: '/news', // URLになるパス。必須ではない。
+        template: './src/templates/NewsPost.vue' // 記事ページのVueコンポーネントファイルの指定
       }
     },
     {
       use: '@gridsome/vue-remark',
       options: {
-        typeName: 'Post', // 必須。GraphQL上で扱う型定義
-        baseDir: './posts', // 記事となるmarkdownファイルを置くディレクトリ
-        pathPrefix: '/posts', // URLになるパス。必須ではない。
-        template: './src/templates/Post.vue' // 記事ページのVueコンポーネントファイルの指定
+        typeName: 'ProductPost', // 必須。GraphQL上で扱う型定義
+        baseDir: './posts/products', // 記事となるmarkdownファイルを置くディレクトリ
+        pathPrefix: '/products', // URLになるパス。必須ではない。
+        template: './src/templates/ProductPost.vue' // 記事ページのVueコンポーネントファイルの指定
       }
-    }
+    }  
     //{
     //  use: 'gridsome-plugin-tailwindcss',
     //  options: {
