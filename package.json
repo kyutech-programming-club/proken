@@ -9,7 +9,8 @@
   "dependencies": {
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/vue-remark": "^0.2.5",
-    "gridsome": "^0.7.0"
+    "gridsome": "^0.7.0",
+    "vue2-smooth-scroll": "^1.5.0"
   },
   "devDependencies": {
     "@gridsome/transformer-remark": "^0.6.2",
