@@ -14,23 +14,41 @@ module.exports = {
   siteName: 'Gridsome',
   plugins: [
     {
-      use: 'gridsome-plugin-tailwindcss',
+      use: '@gridsome/vue-remark',
       options: {
-        config: './src/tailwind.js'
+        typeName: 'NewsPost', // 必須。GraphQL上で扱う型定義
+        baseDir: './posts/news', // 記事となるmarkdownファイルを置くディレクトリ
+        pathPrefix: '/news', // URLになるパス。必須ではない。
+        template: './src/templates/NewsPost.vue' // 記事ページのVueコンポーネントファイルの指定
       }
     },
     {
-      use: 'gridsome-plugin-purgecss',
+      use: '@gridsome/vue-remark',
       options: {
-        content: [
-            './src/**/*.vue',
-            './src/**/*.js',
-            './src/**/*.jsx',
-            './src/**/*.md'
-          ],
-          extractor: TailwindExtractor,
-          extensions: ['vue', 'js', 'jsx', 'md']
+        typeName: 'ProductPost', // 必須。GraphQL上で扱う型定義
+        baseDir: './posts/products', // 記事となるmarkdownファイルを置くディレクトリ
+        pathPrefix: '/products', // URLになるパス。必須ではない。
+        template: './src/templates/ProductPost.vue' // 記事ページのVueコンポーネントファイルの指定
       }
-    }
+    }  
+    //{
+    //  use: 'gridsome-plugin-tailwindcss',
+    //  options: {
+    //    config: './src/tailwind.js'
+    //  }
+    //},
+    //{
+    //  use: 'gridsome-plugin-purgecss',
+    //  options: {
+    //    content: [
+    //      './src/**/*.vue',
+    //      './src/**/*.js',
+    //      './src/**/*.jsx',
+    //      './src/**/*.md'
+    //    ],
+    //    extractor: TailwindExtractor,
+    //    extensions: ['vue', 'js', 'jsx', 'md']
+    //  }
+    //}
   ]
 }

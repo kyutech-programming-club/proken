@@ -16,8 +16,45 @@
         <a href="https://github.com/kyutech-programming-club" target="_blank" rel="noopener">GitHub</a>
     </p>
 
+    <div>
+      <h1>News</h1>
+      <g-link v-for="news in $page.allNewsPost.edges" :key="news.node.id" :to="news.node.path">
+          <h2>{{ news.node.title }}</h2>
+      </g-link>
+    </div>
+
+    <div>
+      <h1>Products</h1>
+      <g-link v-for="product in $page.allProductPost.edges" :key="product.node.id" :to="product.node.path">
+          <h2>{{ product.node.title }}</h2>
+      </g-link>
+    </div>
+
 </Layout>
 </template>
+
+<page-query>
+    query{
+        allNewsPost{
+            edges{
+                node{
+                    id
+                    title
+                    path
+                }
+            }
+        },
+        allProductPost{
+            edges{
+                node{
+                    id
+                    title
+                    path
+                }
+            }
+        }
+    }
+</page-query>
 
 <!--JavaScript-->
 
