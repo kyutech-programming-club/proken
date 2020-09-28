@@ -13,13 +13,6 @@ class TailwindExtractor {
 module.exports = {
   siteName: 'Gridsome',
   plugins: [
-    // {
-    //   use: '@gridsome/source-filesystem',
-    //   options: {
-    //     typeName: 'BlogPost',
-    //     path: './posts',
-    //   }
-    // },
     {
       use: '@gridsome/vue-remark',
       options: {
