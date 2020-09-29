@@ -18,11 +18,10 @@
 
     <div>
       <h1>News</h1>
-        <NewsCard 
-            v-for="news in $page.allNewsPost.edges" 
-            :key="news.node.id" 
-            :path="news.node.path" 
-            :title="news.node.title" />
+        <NewsCard
+            v-for="news in $page.allNewsPost.edges"
+            :key="news.node.id"
+            :data="news.node" />
     </div>
 
     <div>
@@ -45,6 +44,7 @@
                 node{
                     id
                     title
+                    path
                 }
             }
         },
