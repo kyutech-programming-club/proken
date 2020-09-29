@@ -1,7 +1,10 @@
 <template>
-<Layout>
-    <NewsCard v-for="news in $page.allNewsPost.edges" :key="news.node.id" :path="news.node.path" :title="news.node.title" />
-</Layout>
+<div>
+    <NewsCard
+        v-for="news in $page.allNewsPost.edges"
+        :key="news.node.id"
+        :data="news.node" />
+</div>
 </template>
 
 <script>
@@ -20,6 +23,7 @@ export default {
                 node{
                     id
                     title
+                    path
                 }
             }
         }
