@@ -12,6 +12,7 @@
     "vuetify": "^2.3.10"
   },
   "devDependencies": {
-    "gridsome-plugin-purgecss": "^1.0.12"
+    "gridsome-plugin-purgecss": "^1.0.12",
+    "webpack-node-externals": "^2.5.2"
   }
 }
