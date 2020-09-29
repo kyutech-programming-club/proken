@@ -1,7 +1,6 @@
 <!--HTML-->
 <template>
 <Layout>
-
     <!-- Learn how to use images here: https://gridsome.org/docs/images -->
     <g-image alt="Example image" src="~/favicon.png" width="135" />
 
@@ -64,9 +63,10 @@
 
 <script>
 import NewsCard from '@/components/NewsCard.vue'
+
 export default {
     components: {
-        NewsCard
+        NewsCard,
     },
     metaInfo: {
         title: 'Hello, world!'

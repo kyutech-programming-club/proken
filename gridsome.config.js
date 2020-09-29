@@ -11,7 +11,7 @@ class TailwindExtractor {
 }
 
 module.exports = {
-  siteName: 'Gridsome',
+  siteName: 'プロ研216',
   plugins: [
     {
       use: '@gridsome/vue-remark',
