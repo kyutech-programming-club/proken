@@ -8,7 +8,8 @@
   },
   "dependencies": {
     "@gridsome/vue-remark": "^0.2.5",
-    "gridsome": "^0.7.0"
+    "gridsome": "^0.7.0",
+    "vuetify": "^2.3.10"
   },
   "devDependencies": {
     "gridsome-plugin-purgecss": "^1.0.12"
