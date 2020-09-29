@@ -1,7 +1,7 @@
 <template>
-<div>
+<Layout>
     <NewsCard v-for="news in $page.allNewsPost.edges" :key="news.node.id" :path="news.node.path" :title="news.node.title" />
-</div>
+</Layout>
 </template>
 
 <script>

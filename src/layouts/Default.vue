@@ -4,6 +4,7 @@
 <div class="layout">
     <header class="header">
         <strong>
+            <g-image alt="proken image" src="~/logo.png" width="60" />
             <g-link to="/">{{ $static.metadata.siteName }}</g-link>
         </strong>
         <nav class="nav">
