@@ -19,8 +19,35 @@
             <g-link to="/products">Products</g-link>
         </v-toolbar-items>
     </v-app-bar>
-    <slot />
-</div>
+
+    <v-container>
+      <v-row 
+        dense
+        align="center"
+      >
+        <v-col cols="12">
+          <slot />
+        </v-col>
+      </v-row>
+    </v-container>
+
+    <v-footer>
+      <v-card
+        flat
+        tile
+        width="100%"
+      >
+        <v-card-text>
+          <a href="https://github.com/kyutech-programming-club">GitHub</a>
+
+        </v-card-text>
+        <v-divider></v-divider>
+        <v-card-text>
+          <strong>プロ研216</strong>
+        </v-card-text>
+      </v-card>
+    </v-footer>
+  </div>
 </template>
 
 <static-query>
