@@ -2,15 +2,10 @@
 <template>
 <Layout>
     <!-- Learn how to use images here: https://gridsome.org/docs/images -->
-    <h1>Welcome to </h1>
+    <h1>Welcome to Proken216!!</h1>
 
     <p>
-      私たちはプロ216
-    </p>
-
-    <p class="home-links">
-        <a href="https://gridsome.org/docs/" target="_blank" rel="noopener">Gridsome Docs</a>
-        <a href="https://github.com/kyutech-programming-club" target="_blank" rel="noopener">GitHub</a>
+      私たちはプロ研216です。「プログラミングを学びたい学生のためのコミュニティ」として活動しています。ハッカソンへの出場や、LT会の開催などを主にやっています。
     </p>
 
     <div>
@@ -75,7 +70,4 @@ export default {
 <!--CSS-->
 
 <style>
-.home-links a {
-    margin-right: 1rem;
-}
 </style>
