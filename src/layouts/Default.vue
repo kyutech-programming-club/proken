@@ -9,15 +9,19 @@
         <v-avatar>
             <g-image alt="proken image" src="~/logo.png" width="60" />
         </v-avatar>
+        <strong>
         <v-toolbar-title>
             <g-link to="/">{{ $static.metadata.siteName }}</g-link>
         </v-toolbar-title>
+        </strong>
         <v-spacer />
+        <strong>
         <v-toolbar-items>
             <g-link to="/">Home</g-link>
             <g-link to="/news/">News</g-link>
             <g-link to="/products">Products</g-link>
         </v-toolbar-items>
+        </strong>
     </v-app-bar>
 
     <v-container>
@@ -38,8 +42,9 @@
         width="100%"
       >
         <v-card-text>
-          <a href="https://github.com/kyutech-programming-club">GitHub</a>
-
+          <a href="https://github.com/kyutech-programming-club">GitHub   </a>
+          <a href="https://www.youtube.com/channel/UCYQ_Lz2h6cTaRBFf2KH6BYw">YouTube   </a>
+          <a href="https://twitter.com/kyutech_proken">Twitter</a>
         </v-card-text>
         <v-divider></v-divider>
         <v-card-text>
