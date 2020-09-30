@@ -43,13 +43,15 @@
       >
         <v-card-text>
           <v-btn
-            v-for="icon in icons"
-            :key="icon"
+            v-for="link_data in linkData"
+            :key=link_data.link
             class="mx-4 white--text"
             icon
+            href={{ link_data.link }}
+            target="_blank"
           >
             <v-icon size="24px">
-              {{ icon }}
+              {{ link_data.icon }}
             </v-icon>
           </v-btn>
         </v-card-text>
@@ -73,10 +75,10 @@ query {
 <script>
   export default {
     data: () => ({
-      icons: [
-        'mdi-github',
-        'mdi-twitter',
-        'mdi-youtube',
+      linkData: [
+        { icon : 'mdi-github', link : "https://github.com/kyutech-programming-club" },
+        { icon : 'mdi-twitter', link : "https://twitter.com/kyutech_proken" },
+        { icon : 'mdi-youtube', link : "https://www.youtube.com/channel/UCYQ_Lz2h6cTaRBFf2KH6BYw" }
       ],
     }),
   }
