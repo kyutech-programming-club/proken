@@ -42,9 +42,16 @@
         width="100%"
       >
         <v-card-text>
-          <a href="https://github.com/kyutech-programming-club">GitHub   </a>
-          <a href="https://www.youtube.com/channel/UCYQ_Lz2h6cTaRBFf2KH6BYw">YouTube   </a>
-          <a href="https://twitter.com/kyutech_proken">Twitter</a>
+          <v-btn
+            v-for="icon in icons"
+            :key="icon"
+            class="mx-4 white--text"
+            icon
+          >
+            <v-icon size="24px">
+              {{ icon }}
+            </v-icon>
+          </v-btn>
         </v-card-text>
         <v-divider></v-divider>
         <v-card-text>
@@ -62,4 +69,16 @@ query {
   }
 }
 </static-query>
+
+<script>
+  export default {
+    data: () => ({
+      icons: [
+        'mdi-github',
+        'mdi-twitter',
+        'mdi-youtube',
+      ],
+    }),
+  }
+</script>
 
