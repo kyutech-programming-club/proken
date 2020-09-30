@@ -16,7 +16,7 @@
         <v-toolbar-items>
             <g-link to="/">Home</g-link>
             <g-link to="/news/">News</g-link>
-            <g-link to="/term">Term</g-link>
+            <g-link to="/products">Products</g-link>
         </v-toolbar-items>
     </v-app-bar>
     <slot />
