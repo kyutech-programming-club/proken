@@ -1,10 +1,12 @@
 <template>
+<Layout>
 <div>
     <NewsCard
         v-for="news in $page.allNewsPost.edges"
         :key="news.node.id"
         :data="news.node" />
 </div>
+</Layout>
 </template>
 
 <script>
