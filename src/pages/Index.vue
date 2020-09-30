@@ -1,28 +1,19 @@
 <!--HTML-->
 <template>
 <Layout>
-
     <!-- Learn how to use images here: https://gridsome.org/docs/images -->
-    <g-image alt="Example image" src="~/favicon.png" width="135" />
-
-    <h1>Hello, world!</h1>
+    <h1>Welcome to Proken216!!</h1>
 
     <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
-    </p>
-
-    <p class="home-links">
-        <a href="https://gridsome.org/docs/" target="_blank" rel="noopener">Gridsome Docs</a>
-        <a href="https://github.com/kyutech-programming-club" target="_blank" rel="noopener">GitHub</a>
+      私たちはプロ研216です。「プログラミングを学びたい学生のためのコミュニティ」として活動しています。ハッカソンへの出場や、LT会の開催などを主にやっています。
     </p>
 
     <div>
       <h1>News</h1>
-        <NewsCard 
-            v-for="news in $page.allNewsPost.edges" 
-            :key="news.node.id" 
-            :path="news.node.path" 
-            :title="news.node.title" />
+        <NewsCard
+            v-for="news in $page.allNewsPost.edges"
+            :key="news.node.id"
+            :data="news.node" />
     </div>
 
     <div>
@@ -45,6 +36,7 @@
                 node{
                     id
                     title
+                    path
                 }
             }
         },
@@ -64,9 +56,10 @@
 
 <script>
 import NewsCard from '@/components/NewsCard.vue'
+
 export default {
     components: {
-        NewsCard
+        NewsCard,
     },
     metaInfo: {
         title: 'Hello, world!'
@@ -77,7 +70,4 @@ export default {
 <!--CSS-->
 
 <style>
-.home-links a {
-    margin-right: 1rem;
-}
 </style>
