@@ -47,7 +47,7 @@
             :key=link_data.link
             class="mx-4 white--text"
             icon
-            href={{ link_data.link }}
+            :href="link_data.link"
             target="_blank"
           >
             <v-icon size="24px">
